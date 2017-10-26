@@ -34,7 +34,7 @@ for Layer = 1: size(BooleanSingleBitWeights,2)
     %Batch Normalization:
     FeatureMaps = vl_nnbnorm(FeatureMaps,BN_Scales{Layer+1},BN_Offsets{Layer+1},'moments',BN_Moments{Layer+1});
 end
-FeatureMaps = sum(sum(FeatureMaps,1),2); %global pooling
+FeatureMaps = sum(sum(FeatureMaps,1),2); %global pooling, no need for softmax for inference
 toc
 
 %quantify the error rate:
