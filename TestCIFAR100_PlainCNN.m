@@ -2,6 +2,7 @@ clear all
  
 %download and load CIFAR-100 test data
 tic
+%if the dollowing download fails, and you use pre-downloaded data, be sure to orient the images as per the originals
 websave('cifar-100-matlab.tar.gz','http://www.cs.toronto.edu/~kriz/cifar-100-matlab.tar.gz');
 gunzip('cifar-100-matlab.tar.gz');untar('cifar-100-matlab.tar');
 load('cifar-100-matlab\test.mat','data','fine_labels')
