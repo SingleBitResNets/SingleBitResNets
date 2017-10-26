@@ -9,7 +9,7 @@ TestImages=permute(reshape(data,[size(data,1),32,32,3,]),[3,2,4,1]);
 toc
  
 %load the trained model
-load('BinaryModelPlainWidth4','BooleanSingleBitWeights','BN_Moments','BN_Scales','BN_Offsets','Stride','Padding','LayerScales')
+load('CIFAR100_20-4-Plain_644kB','BooleanSingleBitWeights','BN_Moments','BN_Scales','BN_Offsets','Stride','Padding','LayerScales')
  
 %convert boolean weights to -1 and 1
 for i = 1:size(BooleanSingleBitWeights,2)
